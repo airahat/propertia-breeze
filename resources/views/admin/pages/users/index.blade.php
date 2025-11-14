@@ -2,9 +2,9 @@
 @section('title', 'Users')
 
 @section('content')
-<div class="container-fluid px-4">
+<div class="container-fluid p-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2 class="fw-bold">Users</h2>
+        <h2 class="fw-bold text-white">Users</h2>
         <a href="{{ url('/users/create') }}" class="btn btn-primary">
             <i class="fa-solid fa-user-plus me-1"></i> Add User
         </a>
