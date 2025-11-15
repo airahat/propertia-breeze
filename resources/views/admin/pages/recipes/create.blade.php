@@ -1,8 +1,8 @@
 @extends('admin.layout.master')
 
 @section('content')
-<div class="container">
-    <h2>Add Recipe</h2>
+<div class="container py-4">
+    <h2 class="fw-bolder text-white">Add Recipe</h2>
 
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>

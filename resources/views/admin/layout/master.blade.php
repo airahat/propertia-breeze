@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield("title", "Home")</title>
+    <title>@yield('title', 'Home')</title>
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
@@ -141,6 +141,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="/projects/create">Add New Projects</a></li>
                                     <li><a class="dropdown-item" href="/materials">Materials & Costs</a></li>
+                                    <li><a class="dropdown-item" href="/recipes">Recipes</a></li>
 
                                 </ul>
                             </li>
@@ -156,17 +157,25 @@
                                 <a class="nav-link dropdown-toggle p-0" href="#" data-bs-toggle="dropdown">
                                     <img src="{{ asset('default-profile.jpg') }}" class="rounded-circle border"
                                         style="width: 35px; height: 35px; object-fit: cover;">
-                                </a> 
+                                </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
-                                    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-user me-2"></i>View
+                                    <li><a class="dropdown-item" href="#"><i
+                                                class="fa-regular fa-user me-2"></i>View
                                             Profile</a>
                                     </li>
                                     <li><a class="dropdown-item" href="#"><i
                                                 class="fa-solid fa-gear me-2"></i>Settings</a>
                                     </li>
-                                    <li><a class="dropdown-item text-danger" href="/login"><i
-                                                class="fa-solid fa-right-from-bracket me-2"></i>Logout</a>
+                                    <li>
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+                                            <button type="submit" class="dropdown-item text-danger">
+                                                <i class="fa-solid fa-right-from-bracket me-2"></i>
+                                                Logout
+                                            </button>
+                                        </form>
                                     </li>
+
                                 </ul>
                             </li>
                         </ul>
@@ -176,7 +185,7 @@
             </nav>
 
             <div class="container-fluid content-area">
-                @yield("content")
+                @yield('content')
             </div>
 
 
@@ -196,7 +205,7 @@
     <script src="{{ asset('assets/js/bootstrap.bundle.js') }}"></script>
     <script src="{{ asset('assets/js/custom.js') }}"></script>
 
-@yield('scripts')
+    @yield('scripts')
 </body>
 
 </html>

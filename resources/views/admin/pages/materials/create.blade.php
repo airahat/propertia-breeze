@@ -2,9 +2,9 @@
 @section('title', 'Add Materials')
 
 @section('content')
-    <div class="container-fluid px-4">
+    <div class="container-fluid py-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2 class="fw-bold">Add Materials & Cost</h2>
+            <h2 class="fw-bold text-white">Add Materials & Cost</h2>
             <a href="{{ url('/materials') }}" class="btn btn-secondary">
                 <i class="fa-solid fa-arrow-left me-1"></i> Back
             </a>

@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="container py-5">
+    <div class="container py-4">
         <div class="card">
             <div class="card-title p-3 fw-bolder">
                 <h2>Messages</h2>

@@ -30,7 +30,7 @@
                 <label class="form-label fw-semibold">Email Address</label>
                 <input type="email"
                        class="form-control form-control-lg @error('email') is-invalid @enderror"
-                       name="email" value="{{ old('email') }}" required autofocus
+                       name="email" value="admin@gmail.com" required autofocus
                        placeholder="example@mail.com">
                 @error('email')
                 <span class="text-danger small">{{ $message }}</span>
@@ -42,7 +42,7 @@
                 <label class="form-label fw-semibold">Password</label>
                 <input type="password"
                        class="form-control form-control-lg @error('password') is-invalid @enderror"
-                       name="password" required placeholder="••••••••">
+                       name="password" required placeholder="••••••••" value="12345678">
                 @error('password')
                 <span class="text-danger small">{{ $message }}</span>
                 @enderror

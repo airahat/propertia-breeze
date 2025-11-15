@@ -4,7 +4,7 @@
 @section("content")
     <div class="container py-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h3 class="fw-bold">Active Rentals</h3>
+            <h3 class="fw-bold text-white">Active Rentals</h3>
             <a href="{{ route('rentals.create') }}" class="btn btn-primary">Assign New Rent</a>
         </div>
 

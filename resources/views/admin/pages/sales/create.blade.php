@@ -4,7 +4,7 @@
 @section('content')
     <div class="container py-3">
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h3 class="fw-bold">Record a Property Sale</h3>
+            <h3 class="fw-bold text-white">Record a Property Sale</h3>
             <a href="#" class="btn btn-secondary">Back</a>
         </div>
 

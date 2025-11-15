@@ -5,7 +5,7 @@
 
     <div class="container py-5">
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h3 class="fw-bold">Add New Tenant</h3>
+            <h3 class="fw-bold text-white">Add New Tenant</h3>
             <a href="#" class="btn btn-secondary">Back</a>
         </div>
 

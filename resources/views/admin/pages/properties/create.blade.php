@@ -5,7 +5,7 @@
     <div class=" py-3">
         {{-- Header --}}
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h3 class="fw-bold text-primary mb-0">Add New Property</h3>
+            <h3 class="fw-bold text-white mb-0">Add New Property</h3>
             <a href="{{ route('properties.index') }}" class="btn btn-outline-secondary">
                 <i class="fa fa-arrow-left me-1"></i> Back to List
             </a>
