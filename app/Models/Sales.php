@@ -13,6 +13,7 @@ protected $fillable = [
     'property_id',
     'buyer_name',
     'buyer_phone',
+    'agent_id',
     'sale_price',
     'paid_price',
     'remaining_price',

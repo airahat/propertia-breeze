@@ -7,6 +7,7 @@ use App\Http\Controllers\TenantController;
 use App\Http\Controllers\RentalsController;
 use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\RecipeController;
+use App\Http\Controllers\AgentController;
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -94,7 +95,6 @@ Route::middleware('auth')->group(function () {
     
     // RECIPE Route
     
-    
     Route::get('/recipes', [RecipeController::class, 'index'])->name('recipes.index');
     Route::get('/recipes/create', [RecipeController::class, 'create'])->name('recipes.create');
     Route::post('/recipes/store', [RecipeController::class, 'store'])->name('recipes.store');
@@ -106,6 +106,18 @@ Route::middleware('auth')->group(function () {
     Route::get('/employees/create', function () {
         return view('create-employee');
     });
+
+
+    // --- AGENTS ROUTE ---
+    Route::resource('/agents', AgentController::class);
+    Route::get('/agents', [AgentController::class, 'index'])->name('agents.index');
+    Route::get('/agents/create', [AgentController::class, 'create'])->name('agents.create');
+    Route::post('/agents/store', [AgentController::class, 'store'])->name('agents.store');
+    Route::get('/agents/{id}', [AgentController::class, 'show'])->name('agents.show');
+    Route::get('/agents/{id}/edit', [AgentController::class, 'edit'])->name('agents.edit');
+
+// --- RENT RECEIPT ROUTE ---
+    Route::get('/rent/receipt', [RentalsController::class, 'receipt'])->name('rent.receipt');
 });
 
 

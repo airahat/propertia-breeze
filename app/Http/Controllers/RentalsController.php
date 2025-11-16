@@ -7,6 +7,7 @@ use App\Models\Rentals;
 use App\Models\RentalStatus;
 use App\Models\Tenant;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class RentalsController extends Controller
 {
@@ -85,4 +86,21 @@ class RentalsController extends Controller
     {
         //
     }
+
+
+
+
+public function receipt()
+{
+    $pdf = Pdf::loadView('rent-receipt');
+    return $pdf->stream('rent-receipt.pdf');
+}
+
+
+
+
+
+
+
+
 }

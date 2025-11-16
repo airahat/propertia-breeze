@@ -8,6 +8,7 @@ use App\Models\PaymentStatus;
 use Illuminate\Http\Request;
 use App\Models\Properties;
 use App\Models\Sales;
+use App\Models\Agent;
 
 class SalesController extends Controller
 {
@@ -35,7 +36,8 @@ class SalesController extends Controller
     {
         $properties = Properties::all();
         $paymentStatus = PaymentStatus::all();
-        return view('admin.pages.sales.create', compact('properties', 'paymentStatus'));
+        $agents = Agent::all();
+        return view('admin.pages.sales.create', compact('properties', 'paymentStatus', 'agents'));
     }
 
     /**
@@ -50,6 +52,7 @@ class SalesController extends Controller
             'property_id' => $request->property_id,
             'buyer_name' => $request->buyer_name,
             'buyer_phone' => $request->buyer_phone,
+            'agent_id' => $request->agent_id,
             'sale_price' => $request->price,
             'paid_price' => $request->paid_price,
             'remaining_price' => $request->remaining_price,

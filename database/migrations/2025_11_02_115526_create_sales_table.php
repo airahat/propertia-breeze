@@ -16,10 +16,17 @@ return new class extends Migration
             $table->integer('property_id');
             $table->string('buyer_name');
             $table->string('buyer_phone');
+            $table->integer('agent_id');
             $table->decimal('sale_price', 10, 2);
             $table->integer('paid_price');
             $table->integer('remaining_price');
             $table->integer('payment_status_id');
+            $table->integer('size');
+            $table->integer('measurement_id');
+            $table->string('address');
+            $table->string('city');
+            $table->string('area');
+            $table->string('notes')->nullable();
             $table->date('sale_date');
             $table->timestamps();
         });

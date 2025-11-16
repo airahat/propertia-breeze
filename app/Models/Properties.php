@@ -13,6 +13,7 @@ class Properties extends Model
         'title',
         'description',
         'property_type_id',
+        'property_purpose_id',
         'address',
         'city',
         'area',

@@ -64,6 +64,15 @@
                     <label class="form-label">Buyer Phone</label>
                     <input type="text" name="buyer_phone" class="form-control" placeholder="Enter buyer phone" />
                 </div>
+                <div class="mb-3">
+                    <label class="form-label">Agent</label>
+                    <select name="agent_id" id="agent" class="form-control">
+                        <option value="">Select an agent...</option>
+                        @foreach ($agents as $agent)
+                            <option value="{{ $agent['id'] }}">{{ $agent['name'] }}</option>
+                        @endforeach
+                    </select>
+                </div>
 
 
                 

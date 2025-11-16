@@ -84,9 +84,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link d-flex {{ request()->is('employees*') ? 'active' : '' }}"
-                                href="/employees">
-                                <span class="me-auto">Employees</span>
+                            <a class="nav-link d-flex {{ request()->is('agents*') ? 'active' : '' }}"
+                                href="/agents">
+                                <span class="me-auto">Agents</span>
                                 <i class="fa-solid fs-5 fa-users"></i>
                             </a>
                         </li>
