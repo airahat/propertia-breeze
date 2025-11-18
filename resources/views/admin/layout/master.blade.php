@@ -49,7 +49,20 @@
                                 <i class="fa-solid fa-city fs-5"></i>
                             </a>
                         </li>
+                        
+                                                <li class="nav-item">
+                                                    <a class="nav-link d-flex {{ request()->is('sales*') ? 'active' : '' }}" href="/sales">
+                                                        <span class="me-auto">Sales</span>
+                                                        <i class="fa-solid fs-5 fa-sack-dollar"></i>
+                                                    </a>
+                                                </li>
 
+                        <li class="nav-item">
+                            <a class="nav-link d-flex {{ request()->is('tenants*') ? 'active' : '' }}" href="/tenants">
+                                <span class="me-auto">Tenants</span>
+                                <i class="fa-solid fa-user-plus fs-5"></i>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link d-flex {{ request()->is('rental*') ? 'active' : '' }}" href="/rental">
                                 <span class="me-auto">Rentals</span>
@@ -58,23 +71,10 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link d-flex {{ request()->is('sales*') ? 'active' : '' }}" href="/sales">
-                                <span class="me-auto">Sales</span>
-                                <i class="fa-solid fs-5 fa-sack-dollar"></i>
-                            </a>
-                        </li>
-
-                        <li class="nav-item">
                             <a class="nav-link d-flex {{ request()->is('projects*') ? 'active' : '' }}"
                                 href="/projects">
                                 <span class="me-auto">Projects</span>
                                 <i class="fa-solid fs-5 fa-person-digging"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link d-flex {{ request()->is('tenants*') ? 'active' : '' }}" href="/tenants">
-                                <span class="me-auto">Tenants</span>
-                                <i class="fa-solid fa-user-plus fs-5"></i>
                             </a>
                         </li>
                         <li class="nav-item">
@@ -130,7 +130,7 @@
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="/properties/create">Add New Property</a></li>
                                     <li><a class="dropdown-item" href="/properties/sell">Sell a Property</a></li>
-                                    <li><a class="dropdown-item" href="/rent">Rent an Apartment</a></li>
+                                    <li><a class="dropdown-item" href="/rental/create">Rent an Apartment</a></li>
                                 </ul>
                             </li>
 
@@ -153,32 +153,52 @@
 
                         <!-- RIGHT MENU -->
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item dropdown d-flex">
-                                <a class="nav-link dropdown-toggle p-0" href="#" data-bs-toggle="dropdown">
-                                    <img src="{{ asset('default-profile.jpg') }}" class="rounded-circle border"
-                                        style="width: 35px; height: 35px; object-fit: cover;">
-                                </a>
-                                <ul class="dropdown-menu dropdown-menu-end">
-                                    <li><a class="dropdown-item" href="#"><i
-                                                class="fa-regular fa-user me-2"></i>View
-                                            Profile</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="#"><i
-                                                class="fa-solid fa-gear me-2"></i>Settings</a>
-                                    </li>
-                                    <li>
-                                        <form method="POST" action="{{ route('logout') }}">
-                                            @csrf
-                                            <button type="submit" class="dropdown-item text-danger">
-                                                <i class="fa-solid fa-right-from-bracket me-2"></i>
-                                                Logout
-                                            </button>
-                                        </form>
-                                    </li>
+    <li class="nav-item dropdown">
 
-                                </ul>
-                            </li>
-                        </ul>
+        <!-- Entire clickable area -->
+        <a class="nav-link dropdown-toggle dropdown-toggle-no-caret d-flex align-items-center p-0" 
+           href="#" 
+           data-bs-toggle="dropdown">
+
+            <!-- Profile Image -->
+            <img src="{{ asset('default-profile.jpg') }}" 
+                 class="rounded-circle border me-2"
+                 style="width: 35px; height: 35px; object-fit: cover;">
+
+            <!-- User Name -->
+            <span class="fw-semibold me-2">
+               {{ Auth::user()->name ?? 'Guest' }}
+
+            </span>
+
+            
+        </a>
+
+        <!-- Dropdown Menu -->
+        <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+                <a class="dropdown-item" href="#">
+                    <i class="fa-regular fa-user me-2"></i>View Profile
+                </a>
+            </li>
+            <li>
+                <a class="dropdown-item" href="#">
+                    <i class="fa-solid fa-gear me-2"></i>Settings
+                </a>
+            </li>
+            <li>
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <button type="submit" class="dropdown-item text-danger">
+                        <i class="fa-solid fa-right-from-bracket me-2"></i>
+                        Logout
+                    </button>
+                </form>
+            </li>
+        </ul>
+    </li>
+</ul>
+
 
                     </div>
                 </div>

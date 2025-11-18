@@ -8,6 +8,7 @@ use App\Http\Controllers\RentalsController;
 use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\AgentController;
+use App\Http\Controllers\EmailController;
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -118,6 +119,18 @@ Route::middleware('auth')->group(function () {
 
 // --- RENT RECEIPT ROUTE ---
     Route::get('/rent/receipt', [RentalsController::class, 'receipt'])->name('rent.receipt');
+
+
+
+// EMAIL Routes
+Route::get('/admin/emails', [EmailController::class, 'inbox'])->name('emails.index');
+Route::get('/admin/emails/read/{uid}', [EmailController::class, 'read'])->name('emails.read');
+Route::get('/admin/emails/fetch', [EmailController::class, 'fetch'])->name('emails.fetch');
+
+// test IMAP connection
+Route::get('/test-imap', [EmailController::class, 'testIMAP']);
+
+
 });
 
 
