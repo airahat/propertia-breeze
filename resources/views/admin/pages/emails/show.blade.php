@@ -7,7 +7,7 @@
 <div class="container py-4">
     <div class="card">
         <div class="card-title p-3 fw-bolder">
-            <h2>Message Details</h2>
+            <h2>Email Details</h2>
         </div>
         <div class="card-body">
 

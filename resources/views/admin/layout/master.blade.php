@@ -146,7 +146,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link nav-hover" href="/messages">Messages</a>
+                                <a class="nav-link nav-hover" href="/admin/emails">Emails</a>
                             </li>
 
                         </ul>
