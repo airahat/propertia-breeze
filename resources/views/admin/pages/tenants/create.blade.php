@@ -16,31 +16,31 @@
 
                 <div class="mb-3">
                     <label class="form-label">Tenant Name</label>
-                    <input type="text" name="name" class="form-control" placeholder="Enter tenant name" />
+                    <input type="text" name="name" class="form-control" placeholder="Enter tenant name" value="Kamal" />
                 </div>
 
 
                 <div class="mb-3">
                     <label class="form-label">NID</label>
-                    <input type="text" name="nid" class="form-control" placeholder="Enter rent amount" />
+                    <input type="text" name="nid" class="form-control" placeholder="NID" value="123512312"/>
                 </div>
 
 
                 <div class="row g-3 mb-3">
                     <div class="col-md-6">
                         <label class="form-label">Phone</label>
-                        <input type="text" name="phone" class="form-control" />
+                        <input type="text" name="phone" class="form-control" value="0163423423"/>
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Email</label>
-                        <input type="email" name="email" class="form-control" min="1" max="31" />
+                        <input type="email" name="email" class="form-control" min="1" max="31" value="project@isdb.com"/>
                     </div>
                 </div>
 
 
                 <div class="mb-3">
                     <label class="form-label">Address</label>
-                    <textarea class="form-control" name="address" rows="3" placeholder="Any additional details..."></textarea>
+                    <textarea class="form-control" name="address" rows="3" placeholder="Any additional details..."> Mirpur DOHS </textarea>
                 </div>
 
 

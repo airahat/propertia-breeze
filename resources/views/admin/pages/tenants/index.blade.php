@@ -4,7 +4,7 @@
 @section("content")
     <div class="container py-5">
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h3 class="fw-bold">Active Tenants</h3>
+            <h3 class="fw-bold text-white">Active Tenants</h3>
             <a href="/tenants/create" class="btn btn-primary">Add New Tenant</a>
         </div>
 

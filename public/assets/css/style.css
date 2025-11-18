@@ -235,3 +235,12 @@ body {
     height: 80px;
     border: 1px solid #000;
 }
+
+.nav-link[aria-expanded="true"] i {
+    transform: rotate(180deg);
+    transition: 0.2s;
+}
+
+.nav-link[aria-expanded="false"] i {
+    transition: 0.2s;
+}

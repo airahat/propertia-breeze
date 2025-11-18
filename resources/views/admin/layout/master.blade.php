@@ -49,13 +49,13 @@
                                 <i class="fa-solid fa-city fs-5"></i>
                             </a>
                         </li>
-                        
-                                                <li class="nav-item">
-                                                    <a class="nav-link d-flex {{ request()->is('sales*') ? 'active' : '' }}" href="/sales">
-                                                        <span class="me-auto">Sales</span>
-                                                        <i class="fa-solid fs-5 fa-sack-dollar"></i>
-                                                    </a>
-                                                </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link d-flex {{ request()->is('sales*') ? 'active' : '' }}" href="/sales">
+                                <span class="me-auto">Sales</span>
+                                <i class="fa-solid fs-5 fa-sack-dollar"></i>
+                            </a>
+                        </li>
 
                         <li class="nav-item">
                             <a class="nav-link d-flex {{ request()->is('tenants*') ? 'active' : '' }}" href="/tenants">
@@ -63,12 +63,53 @@
                                 <i class="fa-solid fa-user-plus fs-5"></i>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link d-flex {{ request()->is('rental*') ? 'active' : '' }}" href="/rental">
                                 <span class="me-auto">Rentals</span>
                                 <i class="fa-solid fa-house-user fs-5"></i>
                             </a>
+                        </li> --}}
+                        <li class="nav-item">
+
+                            <a class="nav-link d-flex justify-content-between align-items-center"
+                                data-bs-toggle="collapse" href="#rentalsMenu" role="button"
+                                aria-controls="rentalsMenu">
+
+                                <span>Rentals</span>
+
+                                <i class="fa-solid fa-chevron-down fs-5"></i>
+                            </a>
+
+                            <div class="collapse {{ request()->is('rental*' ) || request()->is('rent-collection*') ? 'show' : '' }}" id="rentalsMenu">
+                                <ul class="nav flex-column ms-3">
+
+                                    <li class="nav-item">
+                                        <a class="nav-link {{ request()->is('rental') ? 'active' : '' }}"
+                                            href="/rental">
+                                            Rentals
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link {{ request()->is('rental/create') ? 'active' : '' }}"
+                                            href="/rental/create">
+                                            Rent an Apartment
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link {{ request()->is('rent-collection') ? 'active' : '' }}"
+                                            href="/rent-collection">
+                                            Rent Collection
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
                         </li>
+
+
 
                         <li class="nav-item">
                             <a class="nav-link d-flex {{ request()->is('projects*') ? 'active' : '' }}"
@@ -84,8 +125,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link d-flex {{ request()->is('agents*') ? 'active' : '' }}"
-                                href="/agents">
+                            <a class="nav-link d-flex {{ request()->is('agents*') ? 'active' : '' }}" href="/agents">
                                 <span class="me-auto">Agents</span>
                                 <i class="fa-solid fs-5 fa-users"></i>
                             </a>
@@ -124,18 +164,20 @@
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle nav-hover" href="#" data-bs-toggle="dropdown">
+                                <a class="nav-link dropdown-toggle nav-hover" href="#"
+                                    data-bs-toggle="dropdown">
                                     Properties
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="/properties/create">Add New Property</a></li>
                                     <li><a class="dropdown-item" href="/properties/sell">Sell a Property</a></li>
-                                    <li><a class="dropdown-item" href="/rental/create">Rent an Apartment</a></li>
+                                    {{-- <li><a class="dropdown-item" href="/rental/create">Rent an Apartment</a></li> --}}
                                 </ul>
                             </li>
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle nav-hover" href="#" data-bs-toggle="dropdown">
+                                <a class="nav-link dropdown-toggle nav-hover" href="#"
+                                    data-bs-toggle="dropdown">
                                     Projects
                                 </a>
                                 <ul class="dropdown-menu">
@@ -144,6 +186,9 @@
                                     <li><a class="dropdown-item" href="/recipes">Recipes</a></li>
 
                                 </ul>
+                                {{-- <li class="nav-item">
+                                    <a class="nav-link nav-hover" href="/rents">Rent Collection</a>
+                                </li> --}}
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link nav-hover" href="/admin/emails">Emails</a>
@@ -153,51 +198,49 @@
 
                         <!-- RIGHT MENU -->
                         <ul class="navbar-nav ms-auto">
-    <li class="nav-item dropdown">
+                            <li class="nav-item dropdown">
 
-        <!-- Entire clickable area -->
-        <a class="nav-link dropdown-toggle dropdown-toggle-no-caret d-flex align-items-center p-0" 
-           href="#" 
-           data-bs-toggle="dropdown">
+                                <!-- Entire clickable area -->
+                                <a class="nav-link dropdown-toggle dropdown-toggle-no-caret d-flex align-items-center p-0"
+                                    href="#" data-bs-toggle="dropdown">
 
-            <!-- Profile Image -->
-            <img src="{{ asset('default-profile.jpg') }}" 
-                 class="rounded-circle border me-2"
-                 style="width: 35px; height: 35px; object-fit: cover;">
+                                    <!-- Profile Image -->
+                                    <img src="{{ asset('default-profile.jpg') }}" class="rounded-circle border me-2"
+                                        style="width: 35px; height: 35px; object-fit: cover;">
 
-            <!-- User Name -->
-            <span class="fw-semibold me-2">
-               {{ Auth::user()->name ?? 'Guest' }}
+                                    <!-- User Name -->
+                                    <span class="fw-semibold me-2">
+                                        {{ Auth::user()->name ?? 'Guest' }}
 
-            </span>
+                                    </span>
 
-            
-        </a>
 
-        <!-- Dropdown Menu -->
-        <ul class="dropdown-menu dropdown-menu-end">
-            <li>
-                <a class="dropdown-item" href="#">
-                    <i class="fa-regular fa-user me-2"></i>View Profile
-                </a>
-            </li>
-            <li>
-                <a class="dropdown-item" href="#">
-                    <i class="fa-solid fa-gear me-2"></i>Settings
-                </a>
-            </li>
-            <li>
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                    <button type="submit" class="dropdown-item text-danger">
-                        <i class="fa-solid fa-right-from-bracket me-2"></i>
-                        Logout
-                    </button>
-                </form>
-            </li>
-        </ul>
-    </li>
-</ul>
+                                </a>
+
+                                <!-- Dropdown Menu -->
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fa-regular fa-user me-2"></i>View Profile
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fa-solid fa-gear me-2"></i>Settings
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+                                            <button type="submit" class="dropdown-item text-danger">
+                                                <i class="fa-solid fa-right-from-bracket me-2"></i>
+                                                Logout
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
 
 
                     </div>

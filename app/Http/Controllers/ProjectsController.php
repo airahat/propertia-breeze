@@ -8,58 +8,65 @@ use Illuminate\Http\Request;
 class ProjectsController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of projects.
      */
     public function index()
     {
-        //
+        $projects = Projects::orderBy('id', 'desc')->get();
+        return view('admin.pages.projects.index', compact('projects'));
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new project.
      */
     public function create()
     {
-        //
+        return view('admin.pages.projects.create');
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created project in storage.
      */
     public function store(Request $request)
     {
-        //
+
+
+        Projects::create($request->all());
+
+        return redirect()->route('projects.index')->with('success', 'Project created successfully.');
     }
 
     /**
-     * Display the specified resource.
+     * Show the form for editing a project.
      */
-    public function show(Projects $projects)
+    public function edit(Projects $project)
     {
-        //
+        return view('admin.pages.projects.edit', compact('project'));
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Update a project in storage.
      */
-    public function edit(Projects $projects)
+    public function update(Request $request, Projects $project)
     {
-        //
+
+
+        $project->update($request->all());
+
+        return redirect()->route('projects.index')->with('success', 'Project updated successfully.');
     }
 
     /**
-     * Update the specified resource in storage.
+     * Delete a project.
      */
-    public function update(Request $request, Projects $projects)
+    public function destroy(Projects $project)
     {
-        //
+        $project->delete();
+
+        return redirect()->route('projects.index')->with('success', 'Project deleted successfully.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Projects $projects)
-    {
-        //
-    }
+ 
+
+
 }

@@ -47,7 +47,7 @@
                             </td>
                             <td>{{ Str::limit($project->description, 50) }}</td>
                             <td>
-                                <a href="" class="btn btn-sm btn-outline-info" title="View">
+                                <a href="{{ route('projects.show', $project->id) }}" class="btn btn-sm btn-outline-info" title="View">
                                     <i class="fa-regular fa-eye"></i>
                                 </a>
                                 <a href="{{ route('projects.edit', $project->id) }}" class="btn btn-sm btn-outline-primary" title="Edit">

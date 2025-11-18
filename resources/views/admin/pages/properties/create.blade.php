@@ -28,14 +28,14 @@
                     <div class="mb-3">
                         <label class="form-label fw-semibold">Property Title</label>
                         <input type="text" name="title" class="form-control shadow-sm"
-                            placeholder="Ex: Modern Apartment in Banani" required>
+                            placeholder="Ex: Modern Apartment in Banani" required value="IsDB Project Apartment">
                     </div>
 
                     {{-- Description --}}
                     <div class="mb-3">
                         <label class="form-label fw-semibold">Description</label>
                         <textarea name="description" class="form-control shadow-sm" rows="4"
-                            placeholder="Write details about the property..." required></textarea>
+                            placeholder="Write details about the property..." required> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis minus corporis suscipit sed distinctio. Minus veniam magni aut nostrum fugit praesentium, quidem autem veritatis earum vitae minima tenetur! Nostrum, magnam! </textarea>
                     </div>
 
                     {{-- Dropdowns --}}
@@ -63,7 +63,7 @@
                         <div class="col-md-4">
                             <label class="form-label fw-semibold">Price (৳)</label>
                             <input type="number" name="price" class="form-control shadow-sm" placeholder="Ex: 35000"
-                                required>
+                                required value="25000">
                         </div>
                     </div>
 
@@ -72,19 +72,19 @@
                         <div class="col-md-6">
                             <label class="form-label fw-semibold">Address</label>
                             <input type="text" name="address" class="form-control shadow-sm"
-                                placeholder="Ex: House 12, Road 3, Banani, Dhaka">
+                                placeholder="Ex: House 12, Road 3, Banani, Dhaka" value="Agargaon, Dhaka">
                         </div>
                         <div class="col-md-3">
                             <label class="form-label fw-semibold">City</label>
-                            <input type="text" name="city" class="form-control shadow-sm" placeholder="Ex: Dhaka">
+                            <input type="text" name="city" class="form-control shadow-sm" placeholder="Ex: Dhaka" value="Dhaka">
                         </div>
                         <div class="col-md-3">
                             <label class="form-label fw-semibold">Area</label>
-                            <input type="text" name="area" class="form-control shadow-sm" placeholder="Ex: locality">
+                            <input type="text" name="area" class="form-control shadow-sm" placeholder="Ex: locality" value="Agargaon">
                         </div>
                         <div class="col-md-3">
                             <label class="form-label fw-semibold">Size</label>
-                            <input type="number" name="size" class="form-control shadow-sm" placeholder="Ex: 1200">
+                            <input type="number" name="size" class="form-control shadow-sm" placeholder="Ex: 1200" value="1200">
                         </div>
                         <div class="col-md-3">
                             <label class="form-label fw-semibold" for="measurement">Measurement</label>

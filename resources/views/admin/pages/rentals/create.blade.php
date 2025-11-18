@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Due Day (1-31) of Each Month</label>
-                        <input type="text" name="due_date" class="form-control"/>
+                        <input type="text" name="due_date" class="form-control" />
                     </div>
                 </div>
 

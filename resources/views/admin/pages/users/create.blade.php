@@ -19,11 +19,11 @@
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label for="name" class="form-label fw-semibold">Full Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter user's name">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter user's name" value="Steve">
                     </div>
                     <div class="col-md-6">
                         <label for="email" class="form-label fw-semibold">Email Address</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter user's email">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter user's email" value="steve@gmail.com">
                     </div>
                 </div>
 
@@ -31,11 +31,11 @@
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <label for="password" class="form-label fw-semibold">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" value="12345678">
                     </div>
                     <div class="col-md-6">
                         <label for="password_confirmation" class="form-label fw-semibold">Confirm Password</label>
-                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirm password">
+                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirm password" value="12345678">
                     </div>
                 </div>
 

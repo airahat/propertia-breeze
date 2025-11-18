@@ -9,6 +9,8 @@ use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\RecipeController;
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\RentCollectionController;
+use App\Http\Controllers\ProjectsController;
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -55,12 +57,17 @@ Route::middleware('auth')->group(function () {
     
     
     
-    Route::get('/projects/create', function () {
-        return view('admin.pages.projects.create');
-    });
-    Route::get('/projects', function () {
-        return view('admin.pages.projects.index');
-    });
+// Projects Routes
+Route::get('/projects', [ProjectsController::class, 'index'])->name('projects.index');
+Route::get('/projects/create', [ProjectsController::class, 'create'])->name('projects.create');
+Route::post('/projects/store', [ProjectsController::class, 'store'])->name('projects.store');
+Route::get('/projects/{project}/edit', [ProjectsController::class, 'edit'])->name('projects.edit');
+Route::put('/projects/{project}', [ProjectsController::class, 'update'])->name('projects.update');
+Route::delete('/projects/{project}', [ProjectsController::class, 'destroy'])->name('projects.destroy');
+
+
+
+
     Route::get('/messages', function () {
         return view('admin.pages.messages.index');
     });
@@ -89,6 +96,18 @@ Route::middleware('auth')->group(function () {
     Route::get('/rental', [RentalsController::class, 'index'])->name('rentals.index');
     Route::get('/rental/create', [RentalsController::class, 'create'])->name('rentals.create');
     Route::post('/rental/store', [RentalsController::class, 'store'])->name('rentals.store');
+
+
+// RENT COLLECTION Route
+    Route::get('/rent-collection', [RentCollectionController::class, 'index'])->name('rent-collection.index');
+    Route::get('/rent-collection/create', [RentCollectionController::class, 'create'])->name('rent-collection.create');
+    Route::post('/rent-collection/store', [RentCollectionController::class, 'store'])->name('rent-collection.store');
+    Route::get('/rent-collection/{id}/receipt', [RentCollectionController::class, 'receipt'])->name('rent-collection.receipt');
+    Route::delete('/rent-collection/{id}', [RentCollectionController::class, 'destroy'])->name('rent-collection.destroy');
+
+
+
+
     // MATERIALs Route
     Route::get('/materials', [MaterialController::class, 'index'])->name('materials.index');
     Route::get('/materials/create', [MaterialController::class, 'create'])->name('materials.create');

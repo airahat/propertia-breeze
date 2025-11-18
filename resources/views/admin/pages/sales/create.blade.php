@@ -56,13 +56,13 @@
 
                 <div class="mb-3">
                     <label class="form-label">Buyer Name</label>
-                    <input type="text" name="buyer_name" class="form-control" placeholder="Enter buyer name" />
+                    <input type="text" name="buyer_name" class="form-control" placeholder="Enter buyer name" value="Jack Brown" />
                 </div>
 
 
                 <div class="mb-3">
                     <label class="form-label">Buyer Phone</label>
-                    <input type="text" name="buyer_phone" class="form-control" placeholder="Enter buyer phone" />
+                    <input type="text" name="buyer_phone" class="form-control" placeholder="Enter buyer phone" value="0152331232" />
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Agent</label>

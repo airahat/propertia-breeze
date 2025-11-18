@@ -11,7 +11,7 @@
 
 
         <!-- Filters -->
-        <form class="card mb-4 p-3 bg-white border-0 shadow-sm">
+        {{-- <form class="card mb-4 p-3 bg-white border-0 shadow-sm">
             <div class="row g-3">
                 <div class="col-md-4">
                     <input type="text" class="form-control" placeholder="Search property..." />
@@ -36,7 +36,7 @@
                     <button class="btn btn-secondary">Filter</button>
                 </div>
             </div>
-        </form>
+        </form> --}}
 
 
         <!-- Properties Table -->
