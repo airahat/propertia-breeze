@@ -14,17 +14,17 @@
         <!-- Recipe Info -->
         <div class="form-group mb-3">
             <label>Name</label>
-            <input type="text" name="name" class="form-control" required>
+            <input type="text" name="name" class="form-control" required value="Project Recipe">
         </div>
 
         <div class="form-group mb-3">
             <label>Description</label>
-            <textarea name="description" class="form-control"></textarea>
+            <textarea name="description" class="form-control"> Base recipe for 100sqft apartment </textarea>
         </div>
 
         <div class="form-group mb-3">
             <label>Base Area (sqft)</label>
-            <input type="number" name="base_area" class="form-control" required>
+            <input type="number" name="base_area" class="form-control" required value="100">
         </div>
 
         <!-- Materials Table -->
@@ -55,7 +55,7 @@
                     <td class="unit"></td>
                     <td class="cost_per_unit"></td>
                     <td>
-                        <input type="number" name="materials[0][quantity]" class="form-control" min="0" value="0">
+                        <input type="number" name="materials[0][quantity]" class="form-control" min="0" value="380">
                     </td>
                     <td>
                         <button type="button" class="btn btn-danger remove-row">Remove</button>

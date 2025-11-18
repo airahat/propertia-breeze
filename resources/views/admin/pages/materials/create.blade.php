@@ -18,7 +18,7 @@
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="name" class="form-label fw-semibold">Material Name</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter Material name">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter Material name" value="Paint">
                         </div>
                         <div class="col-md-6">
                             <label for="units" class="form-label fw-semibold">Unit</label>
@@ -40,7 +40,7 @@
 
                         <div class="col-md-6">
                             <label for="cost" class="form-label fw-semibold">Cost/Unit</label>
-                            <input type="text" class="form-control" id="cost" name="cost_per_unit" placeholder="Enter cost per unit">
+                            <input type="text" class="form-control" id="cost" name="cost_per_unit" placeholder="Enter cost per unit" value="350">
                         </div>
 
 

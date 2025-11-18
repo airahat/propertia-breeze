@@ -39,7 +39,7 @@
 
                 <div class="mb-3">
                     <label class="form-label">Monthly Rent(৳)</label>
-                    <input type="number" name="monthly_rent" class="form-control" placeholder="Enter rent amount" />
+                    <input type="number" name="monthly_rent" class="form-control" placeholder="Enter rent amount" value="30000"/>
                 </div>
 
 
@@ -50,13 +50,13 @@
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Due Day (1-31) of Each Month</label>
-                        <input type="text" name="due_date" class="form-control" />
+                        <input type="text" name="due_date" class="form-control" value="5" />
                     </div>
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Security Deposit(৳)</label>
-                    <input type="text" name="security_deposit" class="form-control" placeholder="Enter rent amount" />
+                    <input type="text" name="security_deposit" class="form-control" placeholder="Enter rent amount" value="60000"/>
                 </div>
 
 

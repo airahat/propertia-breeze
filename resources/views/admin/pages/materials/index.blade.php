@@ -5,7 +5,7 @@
 @section('content')
 
 
-<div class="container py-4">
+    <div class="container py-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h3 class="fw-bold text-white">Materials & Costs</h3>
             <a href="/materials/create" class="btn btn-primary">Add New Material</a>
@@ -26,16 +26,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($materials as $i=> $material )
-                        
-                        <tr>
-                            <td>{{ $i+1 }}</td>
-                            <td>{{ $material->name }}</td>
-                            <td>{{ $material->unit }}</td>
-                            <td>{{ $material->cost }}</td>
-                            <td>2027-01-01</td>
-                            
-                        </tr>
+                        @foreach ($materials as $i => $material)
+
+                            <tr>
+                                <td>{{ $i + 1 }}</td>
+                                <td>{{ $material->name }}</td>
+                                <td>{{ $material->unit }}</td>
+                                <td>{{ $material->cost }}</td>
+                                <td> <a href="#" class="btn btn-sm btn-outline-info" title="View"><i
+                                            class="fa-regular fa-eye"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-primary" title="Edit"><i
+                                            class="fa-solid fa-pen-to-square"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-danger" title="End"><i
+                                            class="fa-solid fa-trash"></i></a>
+                                </td>
+
+                            </tr>
                         @endforeach
 
 
